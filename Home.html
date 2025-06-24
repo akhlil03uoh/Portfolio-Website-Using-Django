@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home | Akhlesh Rajput{% endblock %}
+
+{% block content %}
+<style>
+    .grow-link {
+        display: inline-block;
+        transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .grow-link:hover {
+        transform: scale(1.1);
+        color: #ff6600;
+    }
+
+    .grow-link:active {
+        transform: scale(1.2);
+    }
+    h3 {
+        color:rgb(0, 136, 255);
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    h2 {
+        text-decoration: underline;
+    }
+    
+</style>
+
+<body style="background-color:rgb(226, 215, 232); font-family: poppins, sans-serif; color: #333;">
+<section style="padding: 60px 20px; text-align: center; background-color: rgb(226, 215, 232);">
+    <h1 style="font-size: 48px; margin-bottom: 10px;">Hi, I'm Akhlesh</h1>
+    <p style="font-size: 20px; color: #444;">A Passionate Python Developer | Web Designer | Data Science | Data Analysis | Software Developer | Data Engineer</p>
+
+    <!-- ✅ Just Display Image -->
+    <div style="flex: 1 1 250px; text-align: left; margin-bottom: 20px; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+            <img src="{% static 'images/profile.jpg' %}" alt="My Photo" style="width: 250px; height: 250px; border-radius: 50px; object-fit: cover; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 20px; border: 3px solid #007bff; transition: transform 0.3s; cursor: pointer; ">
+        </div>
+</section>
+
+<section style="padding: 50px 20px;">
+    <h2 style="text-align: center; font-size: 36px;">What I Do</h2>
+    <div style="max-width: 900px; margin: 30px auto; display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px;">
+        <div class="rotate-box" style="flex: 1 1 250px; background-color: #e6f7ff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <h3>Web Development</h3>
+            <p>I build responsive and dynamic websites using Django, HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="rotate-box" style="flex: 1 1 250px; background-color: #e6f7ff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <h3>Python Programming</h3>
+            <p>I am practicing python or <strong>Data Structures and Algorithms</strong> problems on LeetCode and GeeksforGeeks.</p>
+            <p>Problem solving and building backend services with clean and efficient code.</p>
+        </div>
+        <div class="rotate-box" style="flex: 1 1 250px; background-color: #e6f7ff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <h3>Data Analysis</h3>
+            <p>I am worked on Uber Data how data can Clean, Manipulate and Visiualize using python libraries like Pandas, Numpy etc.</p>
+        </div>
+        <div class="rotate-box" style="flex: 1 1 250px; background-color:#e6f7ff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <h3>Problem Solving Journey Link</h3>
+            <p style="margin-top: 10px;">
+                <a href="https://leetcode.com/u/Akhlesh_Rajput/" target="_blank" class="grow-link" style="color:green; text-decoration: none;">LeetCode Profile</a><br>
+                <a href="https://www.geeksforgeeks.org/user/akhleshrae7n/" target="_blank" class="grow-link" style="color:green; text-decoration: none;">GFG Profile</a>
+
+            </p>
+        </div>
+    </div>
+</section>
+</body>
+<section style="background-color: rgb(226, 215, 232);; padding: 50px 20px; color: #333; text-align: center;">
+    <h2>Want to work together?</h2>
+    <p id = "p1">Check out my projects or get in touch below.</p>
+</section>
+{% endblock %}

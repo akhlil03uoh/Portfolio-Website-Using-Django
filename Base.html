@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Website{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .rotate-box {
+            transition: transform 0.6s ease;
+        }
+        .rotate-box:hover {
+            transform: rotateY(360deg);
+        }
+
+        /* ✅ Hover and Click Effects Only */
+        nav a {
+            display: inline-block;
+            font-size: 16px;
+            color: #333;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        nav a:hover {
+            transform: scale(1.1);
+            color: rgb(221, 85, 27);
+        }
+
+        nav a.clicked {
+            transform: scale(1.2);
+            color: #ff6600;
+            box-shadow: 0 0 12px rgba(255, 102, 0, 0.6); /* ✅ Blur glow on click */
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(226, 215, 232);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+    </style>
+    <style>
+    .grow-button {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: inline-block;
+    }
+    .grow-button:hover {
+        transform: scale(1.07);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    #w1 {
+        text-decoration: underline;
+    }
+</style>
+<title>Akhlesh Rajput | Developer Portfolio</title>
+<meta name="description" content="Portfolio of Akhlesh Rajput, a Python/Django developer. Home, About, Projects, resume, contact.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://akhleshrajpoot.com/">
+
+
+    
+</head>
+
+<body>
+
+<!-- Header and Navigation -->
+<header style="background-color:#cbb6e8; padding: 20px; text-align: center;">
+    <nav>
+        <a href="{% url 'Home' %}" onclick="navClicked(event)" style="white: white; margin: 0 15px;">Home</a>
+        <a href="{% url 'About' %}" onclick="navClicked(event)" style="#333: white; margin: 0 15px;">About</a>
+        <a href="{% url 'Projects' %}" onclick="navClicked(event)" style="#333: white; margin: 0 15px;">Projects</a>
+        <a href="{% url 'Resume' %}" onclick="navClicked(event)" style="#333: white; margin: 0 15px;">Resume</a>
+        <a href="{% url 'Contact' %}" onclick="navClicked(event)" style="#333: white; margin: 0 15px;">Contact</a>
+    </nav>
+</header>
+
+<!-- 🌟 Middle Section: Hero Banner -->
+<section style="padding: 60px 20px; text-align: center; background: linear-gradient(100deg, rgb(226, 215, 232)); color: white;">
+    <h1 id = "w1" style="font-size: 2.5rem; margin-bottom: 10px; color: #333;">Welcome to My Website</h1>
+    <p style="font-size: 1.2rem; margin-bottom: 20px; color: #444;">Explore my Projects, Skills, and Resume all in one place.</p>
+    <a href="{% url 'Projects' %}" onclick="navClicked(event)" class="grow-button" style="background: green; color:white; padding: 12px 24px; border-radius: 6px; text-decoration: none;">
+    View Projects</a>
+
+</section>
+
+<!-- Main Content Area -->
+<main style="padding: 40px 20px;">
+    {% block content %}
+    <!-- Page-specific content goes here -->
+    {% endblock %}
+</main>
+
+<!-- Footer -->
+<footer style="background-color: #cbb6e8; text-align: center; padding: 20px; color: green;">
+    <p>© 2025 Akhlesh Rajput. All rights reserved.</p>
+    <p>ph/whatsapp: 7974949682</p>
+    <p>email: akhleshrajpoot4@gmail.com</p>
+</footer>
+
+<!-- ✅ JavaScript for Blur on Click -->
+<script>
+    function navClicked(event) {
+        const links = document.querySelectorAll("nav a");
+        links.forEach(link => link.classList.remove("clicked"));
+
+        const clickedLink = event.currentTarget;
+        clickedLink.classList.add("clicked");
+    }
+</script>
+
+</body>
+</html>

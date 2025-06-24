@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Resume | Akhlesh Rajput{% endblock %}
+
+{% block content %}
+<style>
+    .d1 {
+        transition: transform 0.3s ease;
+    }
+    .d1:hover {
+        transform: scale(1.05);
+    }
+    h2 {
+        color: rgb(0, 136, 255);
+        font-size: 24px;
+        margin-bottom: 10px;
+        text-decoration: underline;
+    }
+    
+    .grow-link {
+        color: green;
+        text-decoration: none;
+        display: inline-block;
+        transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .grow-link:hover {
+        transform: scale(1.1);
+        color:rgb(237, 12, 12);
+    }
+
+    .grow-link:active {
+        transform: scale(0.8);
+    }
+    h1 {
+        text-decoration: underline;
+    }
+</style>
+<body style="background-color: rgb(226, 215, 232); font-family: poppins, sans-serif; color: #333;">
+<section style="padding: 60px 20px; max-width: 900px; margin: auto;">
+    <h1 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px;">My Resume</h1>
+
+    <!-- Personal Info -->
+    <div style="margin-bottom: 40px;">
+        <h2>Personal Information</h2>
+        <p><strong>Name:</strong> Akhlesh Rajput</p>
+        <p><strong>Email:</strong> akhleshrajpoot4@gmail.com</p>
+        <p><strong>Phone:</strong> +91-7974949682</p>
+        <p><strong>Location:</strong> Hyderabad, India</p>
+        <p><strong>Website:</strong> <a  href="https://akhleshrajpoot.com" target="_blank" class="grow-link">akhleshrajpoot.com</a></p>
+        <p><strong>LinkedIn:</strong> <a  href="https://linkedin.com/in/akhleshrajput" target="_blank" class="grow-link">linkedin.com/in/akhleshrajput</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/akhlil03uoh" target="_blank" class="grow-link">github.com/akhlil03uoh</a></p>
+    </div>
+
+    <!-- Objective -->
+    <div style="margin-bottom: 40px;">
+        <h2>Objective</h2>
+        <p>
+            Motivated and detail-oriented MCA student with a strong foundation in Python programming. Seeking opportunities to apply problem-solving and software development skills in real-world projects. Eager to contribute to dynamic teams and grow as a full-stack or backend developer. Committed to continuous learning and delivering efficient, scalable solutions.
+        </p>
+    </div>
+
+    <!-- Education -->
+    <div style="margin-bottom: 40px;">
+        <h2>Education</h2>
+        <ul>
+            <li>
+                <strong>University of Hyderabad</strong><br>
+                Master of Computer Application (MCA) – Aug 2024 – June 2026<br>
+                CGPA: 7.23 / 10.0
+            </li>
+            <br>
+            <li>
+                <strong>Rajiv Gandhi Proudyogiki Vishwavidyalaya (R.G.P.V)</strong><br>
+                B-Tech in Civil Engineering – Aug 2018 – June 2021<br>
+                CGPA: 7.87 / 10.0
+            </li>
+        </ul>
+    </div>
+
+    <!-- Skills Summary -->
+    <div style="margin-bottom: 40px;">
+        <h2>Skills Summary</h2>
+        <ul>
+            <li><strong>Languages:</strong> Python, SQL, C, HTML, CSS, JavaScript</li>
+            <li><strong>Frameworks:</strong> Django, PyTorch, TensorFlow, Pandas, NumPy, Matplotlib</li>
+            <li><strong>Tools:</strong> Excel, PowerPoint, MS Word, MySQL</li>
+            <li><strong>Soft Skills:</strong> Report Building, Problem Solving, Excellent Communication, People Management</li>
+            <li><strong>Platforms:</strong> PyCharm, Jupyter Notebook, Visual Studio Code, Replit, Terminal</li>
+        </ul>
+    </div>
+
+    <!-- Projects -->
+    <div style="margin-bottom: 40px;">
+        <h2>Projects</h2>
+        <ul>
+            <li>
+                <strong>Uber Data Analysis Project</strong> (Nov 2024 – Jan 2025)<br>
+                • Analyzed Uber ride data using Pandas and NumPy<br>
+                • Visualized trends with Matplotlib and Seaborn<br>
+                • Cleaned and presented data using Jupyter Notebook
+            </li>
+            <br>
+            <li>
+                <strong>Portfolio Website</strong> (June 2025)<br>
+                • Built a responsive portfolio using Django, HTML, CSS, JavaScript<br>
+                • Integrated UI components with cross-device compatibility
+            </li>
+            <br>
+            <li>
+                <strong>K-Means Clustering Using Red-Black Tree</strong> (Mar 2025 – Apr 2025)<br>
+                • Used Red-Black Tree to manage dynamic clusters efficiently<br>
+                • Improved scalability for large datasets
+            </li>
+        </ul>
+    </div>
+
+    <!-- Certificates -->
+    <div style="margin-bottom: 40px;">
+        <h2>Certificates</h2>
+        <ul>
+            <li><strong>Programming in Python (Udemy):</strong> Fundamentals, data structures, and practical problem solving</li>
+            <li><strong>MySQL (Oracle):</strong> Proficiency in SQL querying and database design</li>
+            <li><strong>Full Stack Development (GeeksforGeeks):</strong> Django, HTML, CSS, and JavaScript web development</li>
+        </ul>
+    </div>
+
+    <!-- Download Button -->
+    <div class = "d1" style="text-align: center;">
+        <a href="{% static 'docs/resume.pdf' %}" download style="padding: 12px 24px; background: green; color: white; border-radius: 5px; text-decoration: none;">Download Resume (PDF)</a>
+    </div>
+</section>
+</body>
+{% endblock %}

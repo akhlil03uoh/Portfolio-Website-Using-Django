@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}About Me | Akhlesh Rajput{% endblock %}
+
+{% block content %}
+<style>
+    .about-box {
+        transition: transform 0.3s ease;
+    }
+    .about-box:hover {
+        transform: scale(1.05);
+    }
+    h1 {
+        text-decoration: underline;
+    }
+</style>
+
+<body style="background-color:rgb(226, 215, 232); font-family: poppins, sans-serif; color: #333;">
+
+<!-- 🌟 Middle Section: About Me -->
+<section style="padding: 60px 20px; max-width: 800px; margin: auto;">
+    <h1 style="font-size: 2.5rem; text-align: center; margin-bottom: 20px;">About Me</h1>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; justify-content: center;">
+
+        <!-- Profile Image -->
+        <div style="flex: 1 1 250px; text-align: left; margin-bottom: 20px; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+            <img src="{% static 'images/profile.jpg' %}" alt="My Photo" style="width: 280px; height: 280px; border-radius: 50px; object-fit: cover; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 20px; border: 3px solid #007bff; transition: transform 0.3s; cursor: pointer;">
+        </div>
+
+        <!-- Bio Paragraph Boxes -->
+        <div style="flex: 2 1 500px; display: flex; flex-direction: column; gap: 20px;">
+
+            <div class = "about-box" style="background-color: #e6f7ff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <p style="font-size: 1.1rem; line-height: 1.6; color: #333;">
+                    Hello! I'm <strong>Akhlesh Rajput</strong>, a passionate software developer and tech enthusiast from India. I specialize in <strong>Python</strong> and <strong>Django development</strong>, with a strong interest in building efficient, scalable web applications and clean user interfaces.
+                </p>
+            </div>
+
+            <div class = "about-box" style="background-color: #e6f7ff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <p style="font-size: 1.1rem; line-height: 1.6; color: #333;">
+                    I enjoy solving <strong>real-world problems</strong> through code and learning new technologies. I'm also familiar with front-end tools like <strong>HTML, CSS, and JavaScript</strong>, and I love integrating modern design into functional applications.
+                </p>
+            </div>
+
+            <div class = "about-box" style="background-color: #e6f7ff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <p style="font-size: 1.1rem; line-height: 1.6; color: #333;">
+                    I am also passionate about <strong>Data Analysis, Data Science, and Deep Learning</strong>.
+                </p>
+            </div>
+
+            <div class = "about-box" style="background-color: #e6f7ff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <p style="font-size: 1.1rem; line-height: 1.6; color: #333;">
+                    Outside of coding, I’m a curious <strong>learner, reader, and sports</strong> enthusiast. I'm always open to new ideas, collaborations, and freelance opportunities.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+</body>
+{% endblock %}

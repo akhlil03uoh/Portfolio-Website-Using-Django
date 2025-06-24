@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contact | Akhlesh Rajput{% endblock %}
+
+{% block content %}
+<style>
+    .grow-box {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .grow-box:hover,
+    .grow-box:focus {
+        transform: scale(1.03);
+        box-shadow: 0 0 8px rgba(94, 255, 0);
+        outline: none;
+        border-color:rgb(94, 255, 0);
+    }
+</style>
+<style>
+    .grow-button {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: inline-block;
+    }
+    .grow-button:hover {
+        transform: scale(1.07);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    h1 {
+        text-decoration: underline;
+    }
+</style>
+
+<body style="background-color: rgb(226, 215, 232); font-family: poppins, sans-serif; color: #333;">
+<section style="padding: 60px 20px; max-width: 800px; margin: auto;">
+    <h1 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px;">Contact Me</h1>
+
+    {% if messages %}
+        <ul style="list-style: none; padding: 0;">
+            {% for message in messages %}
+                <li style="color: green; font-weight: bold;">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <form method="POST" action="" style="display: flex; flex-direction: column; gap: 20px;">
+        {% csrf_token %}
+        <div>
+            <label for="name">Your Name</label><br>
+            <input type="text" name="name" id="name" required class="grow-box" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+        </div>
+
+        <div>
+            <label for="email">Your Email</label><br>
+            <input type="email" name="email" id="email" required class="grow-box" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+        </div>
+
+        <div>
+            <label for="message">Message</label><br>
+            <textarea name="message" id="message" rows="6" required class="grow-box" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+        </div>
+
+        <div style="text-align: center;">
+            <button type="submit" class="grow-button" style="padding: 12px 30px; background-color: green; color: white; border: none; border-radius: 5px;">Send Message</button>
+        </div>
+    </form>
+</section>
+</body>
+{% endblock %}

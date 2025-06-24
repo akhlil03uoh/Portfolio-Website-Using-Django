@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Projects | Akhlesh Rajput{% endblock %}
+
+{% block content %}
+<style>
+    .project-box {
+        transition: transform 0.3s ease;
+    }
+    .project-box:hover {
+        transform: scale(1.05);
+    }
+    h3 {
+        color:rgb(0, 136, 255);
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    h1 {
+        text-decoration: underline;
+    }
+    
+</style>
+
+<body style="background-color:rgb(226, 215, 232); font-family: poppins, sans-serif; color: #333;">
+<section style="padding: 60px 20px; max-width: 1200px; margin: auto;">
+    <h1 style="font-size: 2.5rem; text-align: center; margin-bottom: 40px;">My Projects</h1>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+        
+        <div class="project-box" style="background-color: #e6f7ff; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); overflow: hidden;">
+            <div style="padding: 20px;">
+                <h3>Uber Data Analysis</h3>
+                <p>Analyzed Uber ride data using Pandas/NumPy to extract trends in timing/location patterns. Created visualizations with Matplotlib/Seaborn. Cleaned and preprocessed large datasets in Jupyter Notebook.</p>
+            </div>
+        </div>
+
+        <div class="project-box" style="background-color: #e6f7ff; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); overflow: hidden;">
+            <div style="padding: 20px;">
+                <h3>Portfolio Website</h3>
+                <p>Developed a responsive portfolio site using Django, HTML, CSS, and JavaScript to showcase projects. Integrated interactive UI and ensured cross-device compatibility for smooth UX.</p>
+            </div>
+        </div>
+
+        <div class="project-box" style="background-color: #e6f7ff; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); overflow: hidden;">
+            <div style="padding: 20px;">
+                <h3>K-Means Clustering with Red-Black Tree</h3>
+                <p>Implemented K-Means clustering with Red-Black Tree to optimize insertion, deletion, and search. Enhanced performance for large datasets with structured indexing.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+</body>
+{% endblock %}
